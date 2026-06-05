@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ACE Club — Wings</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .page-hero {
+      padding: 4rem 2rem 2rem;
+      max-width: var(--max-w); margin: 0 auto;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* WING BLOCK — full-width stacked cards */
+    .wing-block {
+      border-bottom: 1px solid var(--border);
+      scroll-margin-top: calc(var(--nav-h) + 1rem);
+    }
+    .wing-inner {
+      max-width: var(--max-w); margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+    .wing-header {
+      display: flex; align-items: center; gap: 1.25rem; margin-bottom: 1rem;
+    }
+    .wing-icon-big {
+      width: 56px; height: 56px; border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.6rem; flex-shrink: 0;
+    }
+    .wing-block.cs .wing-icon-big { background: rgba(124,58,237,0.12); color: var(--cs); }
+    .wing-block.ai .wing-icon-big { background: rgba(0,212,255,0.10); color: var(--ai); }
+    .wing-block.es .wing-icon-big { background: rgba(245,158,11,0.10); color: var(--es); }
+
+    .wing-title {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      font-weight: 800; letter-spacing: -0.03em;
+    }
+    .wing-block.cs .wing-title { color: var(--cs); }
+    .wing-block.ai .wing-title { color: var(--ai); }
+    .wing-block.es .wing-title { color: var(--es); }
+
+    .wing-priority {
+      font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase;
+      font-weight: 700; padding: 0.22rem 0.65rem; border-radius: 100px;
+      margin-left: 0.5rem;
+    }
+    .priority-flagship {
+      background: rgba(124,58,237,0.15); color: var(--cs);
+      border: 1px solid rgba(124,58,237,0.25);
+    }
+
+    .wing-desc {
+      color: var(--muted); font-size: 0.97rem;
+      max-width: 620px; margin-bottom: 2.5rem; line-height: 1.75;
+    }
+
+    .wing-two-col {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;
+    }
+    @media (max-width: 660px) { .wing-two-col { grid-template-columns: 1fr; } }
+
+    .topics-box {
+      background: var(--bg2); border: 1px solid var(--border);
+      border-radius: 12px; padding: 1.5rem;
+    }
+    .topics-box h4 {
+      font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--muted); font-weight: 700; margin-bottom: 1rem;
+    }
+    .topic-list { list-style: none; display: flex; flex-direction: column; gap: 0.55rem; }
+    .topic-list li {
+      font-size: 0.88rem; color: var(--text);
+      display: flex; align-items: center; gap: 0.65rem;
+    }
+    .dot {
+      width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0;
+    }
+    .dot-cs { background: var(--cs); }
+    .dot-ai { background: var(--ai); }
+    .dot-es { background: var(--es); }
+
+    .tags-box {
+      background: var(--bg2); border: 1px solid var(--border);
+      border-radius: 12px; padding: 1.5rem;
+    }
+    .tags-box h4 {
+      font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--muted); font-weight: 700; margin-bottom: 1rem;
+    }
+    .tags-wrap { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .tag {
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.04em;
+      padding: 0.28rem 0.7rem; border-radius: 100px;
+    }
+    .tag-cs { background: rgba(124,58,237,0.08); color: #a78bfa; border: 1px solid rgba(124,58,237,0.18); }
+    .tag-ai { background: rgba(0,212,255,0.08); color: var(--ai); border: 1px solid rgba(0,212,255,0.18); }
+    .tag-es { background: rgba(245,158,11,0.08); color: var(--es); border: 1px solid rgba(245,158,11,0.18); }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="logo.png" alt="ACE Logo">
+    <span class="nav-logo-text">ACE <span class="nav-logo-sub">Club</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="wings.html" class="active">Wings</a></li>
+    <li><a href="objectives.html">Objectives</a></li>
+    <li><a href="activities.html">Activities</a></li>
+    <li><a href="competitions.html">Competitions</a></li>
+    <li><a href="team.html">Team</a></li>
+  </ul>
+ <a href="https://www.gcekjr.ac.in" target="_blank" rel="noopener noreferrer">
+    <span class="nav-badge">GCE Keonjhar</span>
+</a>
+</nav>
+
+<div class="page">
+  <div class="page-hero">
+    <p class="section-label">Our Wings</p>
+    <h1 class="section-title">Three Disciplines. One Club.</h1>
+    <p class="section-desc">ACE brings together three of the most critical fields in modern computing. Cybersecurity is our founding and flagship wing.</p>
+  </div>
+
+  <!-- ======== 1. CYBERSECURITY (FIRST — FLAGSHIP) ======== -->
+  <div class="wing-block cs" id="cybersecurity">
+    <div class="wing-inner">
+      <div class="wing-header">
+        <div class="wing-icon-big">🛡️</div>
+        <div>
+          <h2 class="wing-title">
+            Cybersecurity
+            <span class="wing-priority priority-flagship">Flagship Wing</span>
+          </h2>
+        </div>
+      </div>
+      <p class="wing-desc">
+        Our founding wing and top priority. Cybersecurity at ACE covers everything from ethical hacking and penetration testing to digital forensics and malware analysis. We train members to think like attackers so they can defend like experts — through CTF competitions, lab sessions, and real-world challenges.
+      </p>
+      <div class="wing-two-col">
+        <div class="topics-box">
+          <h4>What You'll Learn</h4>
+          <ul class="topic-list">
+            <li><span class="dot dot-cs"></span>Ethical Hacking & Penetration Testing</li>
+            <li><span class="dot dot-cs"></span>Network Security & Packet Analysis</li>
+            <li><span class="dot dot-cs"></span>Web Application Security (OWASP)</li>
+            <li><span class="dot dot-cs"></span>Digital Forensics & Incident Response</li>
+            <li><span class="dot dot-cs"></span>Malware Analysis & Reverse Engineering</li>
+            <li><span class="dot dot-cs"></span>Cryptography & Steganography</li>
+            <li><span class="dot dot-cs"></span>CTF (Capture The Flag) Competitions</li>
+          </ul>
+        </div>
+        <div class="tags-box">
+          <h4>Tools & Platforms</h4>
+          <div class="tags-wrap">
+            <span class="tag tag-cs">Kali Linux</span>
+            <span class="tag tag-cs">Burp Suite</span>
+            <span class="tag tag-cs">Metasploit</span>
+            <span class="tag tag-cs">Wireshark</span>
+            <span class="tag tag-cs">Nmap</span>
+            <span class="tag tag-cs">Hack The Box</span>
+            <span class="tag tag-cs">TryHackMe</span>
+            <span class="tag tag-cs">picoCTF</span>
+            <span class="tag tag-cs">OWASP ZAP</span>
+            <span class="tag tag-cs">John the Ripper</span>
+            <span class="tag tag-cs">Ghidra</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======== 2. ARTIFICIAL INTELLIGENCE ======== -->
+  <div class="wing-block ai" id="ai">
+    <div class="wing-inner">
+      <div class="wing-header">
+        <div class="wing-icon-big">🧠</div>
+        <div>
+          <h2 class="wing-title">Artificial Intelligence</h2>
+        </div>
+      </div>
+      <p class="wing-desc">
+        The AI wing explores machine learning, deep learning, and intelligent systems. From building predictive models to deploying real-world AI applications — including AI-powered cybersecurity tools — this wing sits at the frontier of what's possible with data and computation.
+      </p>
+      <div class="wing-two-col">
+        <div class="topics-box">
+          <h4>What You'll Learn</h4>
+          <ul class="topic-list">
+            <li><span class="dot dot-ai"></span>Machine Learning Fundamentals</li>
+            <li><span class="dot dot-ai"></span>Deep Learning & Neural Networks</li>
+            <li><span class="dot dot-ai"></span>Natural Language Processing (NLP)</li>
+            <li><span class="dot dot-ai"></span>Computer Vision</li>
+            <li><span class="dot dot-ai"></span>AI for Cybersecurity (Threat Detection)</li>
+            <li><span class="dot dot-ai"></span>Model Training, Evaluation & Deployment</li>
+            <li><span class="dot dot-ai"></span>AI Ethics & Responsible AI</li>
+          </ul>
+        </div>
+        <div class="tags-box">
+          <h4>Tools & Platforms</h4>
+          <div class="tags-wrap">
+            <span class="tag tag-ai">Python</span>
+            <span class="tag tag-ai">TensorFlow</span>
+            <span class="tag tag-ai">PyTorch</span>
+            <span class="tag tag-ai">Scikit-learn</span>
+            <span class="tag tag-ai">Kaggle</span>
+            <span class="tag tag-ai">Google Colab</span>
+            <span class="tag tag-ai">Hugging Face</span>
+            <span class="tag tag-ai">OpenCV</span>
+            <span class="tag tag-ai">Pandas</span>
+            <span class="tag tag-ai">Matplotlib</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======== 3. EMBEDDED SYSTEMS ======== -->
+  <div class="wing-block es" id="embedded">
+    <div class="wing-inner">
+      <div class="wing-header">
+        <div class="wing-icon-big">💻</div>
+        <div>
+          <h2 class="wing-title">Embedded Systems</h2>
+        </div>
+      </div>
+      <p class="wing-desc">
+        The Embedded Systems wing bridges the physical and digital worlds. Members design and build hardware-software systems — from secure IoT devices to real-time microcontroller projects. This wing intersects deeply with cybersecurity through secure hardware design and IoT threat modeling.
+      </p>
+      <div class="wing-two-col">
+        <div class="topics-box">
+          <h4>What You'll Learn</h4>
+          <ul class="topic-list">
+            <li><span class="dot dot-es"></span>Microcontroller Programming (AVR, ARM)</li>
+            <li><span class="dot dot-es"></span>IoT Device Design & Protocols</li>
+            <li><span class="dot dot-es"></span>Real-Time Operating Systems (RTOS)</li>
+            <li><span class="dot dot-es"></span>Sensor Integration & Hardware Interfaces</li>
+            <li><span class="dot dot-es"></span>Secure IoT & Hardware Hacking</li>
+            <li><span class="dot dot-es"></span>Embedded Linux</li>
+            <li><span class="dot dot-es"></span>PCB Design Basics</li>
+          </ul>
+        </div>
+        <div class="tags-box">
+          <h4>Tools & Platforms</h4>
+          <div class="tags-wrap">
+            <span class="tag tag-es">Arduino</span>
+            <span class="tag tag-es">Raspberry Pi</span>
+            <span class="tag tag-es">ESP32</span>
+            <span class="tag tag-es">STM32</span>
+            <span class="tag tag-es">FreeRTOS</span>
+            <span class="tag tag-es">MQTT</span>
+            <span class="tag tag-es">Proteus</span>
+            <span class="tag tag-es">KiCad</span>
+            <span class="tag tag-es">C/C++</span>
+            <span class="tag tag-es">MicroPython</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer-band">
+    <div class="footer-logo">
+      <img src="logo.png" alt="ACE">
+      <span class="footer-logo-text">ACE Club</span>
+    </div>
+    <p class="footer-sub">AI · Cybersecurity · Embedded Systems Wing &nbsp;|&nbsp; GCE Keonjhar, CSE Dept.</p>
+  </footer>
+</div>
+
+</body>
+</html>

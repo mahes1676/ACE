@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ACE Club — Activities</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .acts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1rem;
+    }
+    .act-card {
+      border: 1px solid var(--border); border-radius: 12px;
+      padding: 1.5rem; background: var(--bg2);
+      display: flex; gap: 1rem; align-items: flex-start;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .act-card:hover { border-color: rgba(255,255,255,0.15); transform: translateY(-2px); }
+    .act-dot-col { padding-top: 5px; }
+    .act-dot {
+      width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0;
+    }
+    .dot-cs { background: var(--cs); }
+    .dot-ai { background: var(--ai); }
+    .dot-es { background: var(--es); }
+    .dot-all {
+      background: linear-gradient(135deg, var(--cs), var(--ai));
+    }
+    .act-wing-badge {
+      font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase;
+      font-weight: 700; padding: 0.18rem 0.5rem; border-radius: 100px;
+      margin-bottom: 0.4rem; display: inline-block;
+    }
+    .badge-cs { background: rgba(124,58,237,0.12); color: #a78bfa; }
+    .badge-ai { background: rgba(0,212,255,0.10); color: var(--ai); }
+    .badge-es { background: rgba(245,158,11,0.10); color: var(--es); }
+    .badge-all { background: rgba(255,255,255,0.06); color: var(--muted); }
+    .act-title { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem; }
+    .act-desc { font-size: 0.83rem; color: var(--muted); line-height: 1.65; }
+
+    /* SCHEDULE BAND */
+    .schedule-band {
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .schedule-inner {
+      max-width: var(--max-w); margin: 0 auto; padding: 4rem 2rem;
+    }
+    .schedule-table {
+      width: 100%; border-collapse: collapse;
+      font-size: 0.88rem;
+    }
+    .schedule-table th {
+      text-align: left; padding: 0.75rem 1rem;
+      font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--muted); font-weight: 700;
+      border-bottom: 1px solid var(--border);
+    }
+    .schedule-table td {
+      padding: 0.9rem 1rem;
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+    }
+    .schedule-table tr:last-child td { border-bottom: none; }
+    .schedule-table tr:hover td { background: rgba(255,255,255,0.02); }
+    .freq-badge {
+      font-size: 0.7rem; font-weight: 600; padding: 0.2rem 0.6rem;
+      border-radius: 100px; background: var(--bg3);
+      color: var(--muted); border: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="logo.png" alt="ACE Logo">
+    <span class="nav-logo-text">ACE <span class="nav-logo-sub">Club</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="wings.html">Wings</a></li>
+    <li><a href="objectives.html">Objectives</a></li>
+    <li><a href="activities.html" class="active">Activities</a></li>
+    <li><a href="competitions.html">Competitions</a></li>
+    <li><a href="team.html">Team</a></li>
+  </ul>
+ <a href="https://www.gcekjr.ac.in" target="_blank" rel="noopener noreferrer">
+    <span class="nav-badge">GCE Keonjhar</span>
+</a>
+</nav>
+
+<div class="page">
+  <section class="section">
+    <p class="section-label">What We Do</p>
+    <h1 class="section-title">Club Activities</h1>
+    <p class="section-desc">Regular structured sessions that keep every member growing — from weekly concept labs to cross-domain project building and campus-wide awareness drives.</p>
+
+    <div class="acts-grid">
+      <div class="act-card">
+        <div class="act-dot-col"><div class="act-dot dot-all"></div></div>
+        <div>
+          <span class="act-wing-badge badge-all">All Wings</span>
+          <p class="act-title">Weekly Learning Sessions</p>
+          <p class="act-desc">45–60 min concept sessions followed by hands-on lab exercises. Structured, consistent, and practical across all three wings every week.</p>
+        </div>
+      </div>
+
+      <div class="act-card">
+        <div class="act-dot-col"><div class="act-dot dot-cs"></div></div>
+        <div>
+          <span class="act-wing-badge badge-cs">Cybersecurity</span>
+          <p class="act-title">CTF Competitions</p>
+          <p class="act-desc">Monthly internal CTFs plus semester-based external participation on Hack The Box, TryHackMe, and picoCTF. Compete, solve, learn.</p>
+        </div>
+      </div>
+
+      <div class="act-card">
+        <div class="act-dot-col"><div class="act-dot dot-cs"></div></div>
+        <div>
+          <span class="act-wing-badge badge-cs">Cybersecurity</span>
+          <p class="act-title">Security Labs</p>
+          <p class="act-desc">Hands-on labs in web security, network analysis, and Linux exploitation using Kali Linux, virtual machines, and isolated lab environments.</p>
+        </div>
+      </div>
+
+      <div class="act-card">
+        <div class="act-dot-col"><div class="act-dot dot-ai"></div></div>
+        <div>
+          <span class="act-wing-badge badge-ai">AI</span>
+          <p class="act-title">AI Model Building</p>
+          <p class="act-desc">Build, train, and evaluate ML/DL models from scratch. Kaggle competitions, Google Colab labs, and project showcases every semester.</p>
+        </div>
+      </div>
+
+      <div class="act-card">
+        <div class="act-dot-col"><div class="act-dot dot-es"></div></div>
+        <div>
+          <span class="act-wing-badge badge-es">Embedded</span>
+          <p class="act-title">Hardware Project Nights</p>
+          <p class="act-desc">Prototype IoT devices, program microcontrollers, and build real embedded systems — from sensor arrays to secure hardware demos.</p>
+        </div>
+      </div>
+
+      <div class="act-card">
+        <div class="act-dot-col"><div class="act-dot dot-all"></div></div>
+        <div>
+          <span class="act-wing-badge badge-all">Cross-Wing</span>
+          <p class="act-title">Interdisciplinary Projects</p>
+          <p class="act-desc">Collaborative builds across wings — intelligent threat detection systems, AI-secured IoT devices, network intrusion detectors. Real impact.</p>
+        </div>
+      </div>
+
+      <div class="act-card">
+        <div class="act-dot-col"><div class="act-dot dot-all"></div></div>
+        <div>
+          <span class="act-wing-badge badge-all">Campus</span>
+          <p class="act-title">Awareness Campaigns</p>
+          <p class="act-desc">Campus sessions on phishing, social media safety, digital privacy, and AI ethics. Sharing knowledge beyond the club to the whole college.</p>
+        </div>
+      </div>
+
+      <div class="act-card">
+        <div class="act-dot-col"><div class="act-dot dot-all"></div></div>
+        <div>
+          <span class="act-wing-badge badge-all">All Wings</span>
+          <p class="act-title">Guest Lectures & Research Talks</p>
+          <p class="act-desc">Invite cybersecurity professionals, AI researchers, and embedded engineers. Members also present their own research and project findings.</p>
+        </div>
+      </div>
+
+      <div class="act-card">
+        <div class="act-dot-col"><div class="act-dot dot-all"></div></div>
+        <div>
+          <span class="act-wing-badge badge-all">Hackathons</span>
+          <p class="act-title">Internal Hackathons</p>
+          <p class="act-desc">Semester-end internal hackathons with cross-wing teams. Build something in 24 hours that solves a real problem — judged by faculty and peers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCHEDULE BAND -->
+  <div class="schedule-band">
+    <div class="schedule-inner">
+      <p class="section-label">Cadence</p>
+      <h2 class="section-title">Activity Schedule</h2>
+      <p class="section-desc" style="margin-bottom: 2rem;">How often each activity runs across the academic year.</p>
+      <table class="schedule-table">
+        <thead>
+          <tr>
+            <th>Activity</th>
+            <th>Wing</th>
+            <th>Frequency</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Weekly Learning Sessions</td>
+            <td>All Wings</td>
+            <td><span class="freq-badge">Weekly</span></td>
+          </tr>
+          <tr>
+            <td>Security Labs</td>
+            <td>Cybersecurity</td>
+            <td><span class="freq-badge">Bi-weekly</span></td>
+          </tr>
+          <tr>
+            <td>Internal CTF</td>
+            <td>Cybersecurity</td>
+            <td><span class="freq-badge">Monthly</span></td>
+          </tr>
+          <tr>
+            <td>AI Model Building Sessions</td>
+            <td>AI</td>
+            <td><span class="freq-badge">Bi-weekly</span></td>
+          </tr>
+          <tr>
+            <td>Hardware Project Nights</td>
+            <td>Embedded</td>
+            <td><span class="freq-badge">Bi-weekly</span></td>
+          </tr>
+          <tr>
+            <td>Awareness Campaigns</td>
+            <td>All Wings</td>
+            <td><span class="freq-badge">Monthly</span></td>
+          </tr>
+          <tr>
+            <td>Guest Lectures</td>
+            <td>All Wings</td>
+            <td><span class="freq-badge">Per semester</span></td>
+          </tr>
+          <tr>
+            <td>Internal Hackathon</td>
+            <td>Cross-Wing</td>
+            <td><span class="freq-badge">Per semester</span></td>
+          </tr>
+          <tr>
+            <td>External Competitions</td>
+            <td>All Wings</td>
+            <td><span class="freq-badge">As announced</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <footer class="footer-band">
+    <div class="footer-logo">
+      <img src="logo.png" alt="ACE">
+      <span class="footer-logo-text">ACE Club</span>
+    </div>
+    <p class="footer-sub">AI · Cybersecurity · Embedded Systems Wing &nbsp;|&nbsp; GCE Keonjhar, CSE Dept.</p>
+  </footer>
+</div>
+
+</body>
+</html>

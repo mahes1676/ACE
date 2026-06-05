@@ -1,0 +1,110 @@
+/* ============================================
+   ACE CLUB — SHARED STYLESHEET
+   Edit here → applies to ALL pages
+   ============================================ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --cs:    #7c3aed;
+  --ai:    #00d4ff;
+  --es:    #f59e0b;
+  --bg:    #050b14;
+  --bg2:   #0a1524;
+  --bg3:   #0d1f35;
+  --text:  #e8f4fd;
+  --muted: #7a9bb5;
+  --border: rgba(255,255,255,0.07);
+  --max-w: 1100px;
+  --nav-h: 66px;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  background: var(--bg); color: var(--text);
+  overflow-x: hidden; line-height: 1.6;
+}
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  height: var(--nav-h);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2.5rem;
+  background: rgba(5,11,20,0.92);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-logo {
+  display: flex; align-items: center; gap: 0.65rem;
+  text-decoration: none;
+}
+.nav-logo img { height: 36px; width: 36px; object-fit: contain; filter: invert(1); }
+.nav-logo-text {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.25rem; font-weight: 800; letter-spacing: -0.02em;
+  color: var(--text);
+}
+.nav-logo-sub {
+  font-size: 0.72rem; color: var(--muted);
+  font-weight: 400; font-family: 'Space Grotesk', sans-serif;
+  margin-left: 0.1rem;
+}
+.nav-links { display: flex; gap: 1.6rem; list-style: none; }
+.nav-links a {
+  color: var(--muted); text-decoration: none;
+  font-size: 0.86rem; font-weight: 500;
+  transition: color 0.2s;
+  padding-bottom: 2px;
+  border-bottom: 1.5px solid transparent;
+}
+.nav-links a:hover { color: var(--text); }
+.nav-links a.active { color: var(--text); border-bottom-color: var(--ai); }
+.nav-badge {
+  font-size: 0.7rem; font-weight: 700; letter-spacing: 0.07em;
+  color: var(--bg); background: var(--ai);
+  padding: 0.28rem 0.8rem; border-radius: 100px;
+}
+
+/* PAGE */
+.page { padding-top: var(--nav-h); min-height: 100vh; }
+
+/* SECTION */
+.section { padding: 5rem 2rem; max-width: var(--max-w); margin: 0 auto; }
+.section-label {
+  font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--muted); font-weight: 600; margin-bottom: 0.55rem;
+}
+.section-title {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(1.8rem, 4vw, 2.7rem);
+  font-weight: 800; letter-spacing: -0.03em; margin-bottom: 0.75rem;
+}
+.section-desc { color: var(--muted); max-width: 540px; font-size: 0.96rem; margin-bottom: 2.5rem; }
+
+/* BUTTONS */
+.btn-primary {
+  display: inline-block; padding: 0.78rem 1.7rem; border-radius: 8px;
+  background: var(--ai); color: var(--bg);
+  font-weight: 700; font-size: 0.88rem; text-decoration: none;
+  transition: opacity 0.2s, transform 0.2s; letter-spacing: 0.02em;
+}
+.btn-primary:hover { opacity: 0.88; transform: translateY(-1px); }
+.btn-ghost {
+  display: inline-block; padding: 0.78rem 1.7rem; border-radius: 8px;
+  border: 1px solid var(--border); color: var(--text);
+  font-weight: 600; font-size: 0.88rem; text-decoration: none;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.btn-ghost:hover { border-color: rgba(255,255,255,0.25); transform: translateY(-1px); }
+
+/* FOOTER */
+.footer-band {
+  border-top: 1px solid var(--border); background: var(--bg);
+  padding: 2rem 2rem; text-align: center;
+}
+.footer-logo { display: flex; align-items: center; justify-content: center; gap: 0.6rem; margin-bottom: 0.4rem; }
+.footer-logo img { height: 28px; filter: invert(1); opacity: 0.6; }
+.footer-logo-text { font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 800; color: var(--muted); }
+.footer-sub { font-size: 0.74rem; color: rgba(122,155,181,0.45); letter-spacing: 0.04em; }

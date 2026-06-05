@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ACE Club — Team</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* MENTOR */
+    .mentor-card {
+      border: 1px solid rgba(0,212,255,0.2);
+      border-radius: 14px; padding: 2rem;
+      background: var(--bg2);
+      display: flex; gap: 1.5rem; align-items: center;
+      margin-bottom: 3.5rem;
+    }
+    .mentor-avatar {
+      width: 64px; height: 64px; border-radius: 50%; flex-shrink: 0;
+      background: linear-gradient(135deg, rgba(0,212,255,0.2), rgba(124,58,237,0.2));
+      border: 1.5px solid rgba(0,212,255,0.3);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.2rem;
+      color: var(--ai);
+    }
+    .mentor-role {
+      font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--ai); font-weight: 700; margin-bottom: 0.3rem;
+    }
+    .mentor-name {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.3rem; font-weight: 800; margin-bottom: 0.25rem;
+    }
+    .mentor-detail { font-size: 0.85rem; color: var(--muted); }
+
+    /* FOUNDERS GRID */
+    .founders-label {
+      font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--muted); font-weight: 700; margin-bottom: 1.25rem;
+    }
+    .founders-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+      gap: 1rem;
+    }
+    .founder-card {
+      border: 1px solid var(--border); border-radius: 14px;
+      padding: 1.75rem 1.25rem; text-align: center;
+      background: var(--bg2);
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .founder-card:hover { border-color: rgba(124,58,237,0.3); transform: translateY(-3px); }
+
+    .founder-avatar {
+      width: 56px; height: 56px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.1rem;
+      margin: 0 auto 1rem;
+      border: 1.5px solid var(--border);
+    }
+    /* Alternating gradient avatars */
+    .founder-card:nth-child(1) .founder-avatar { background: linear-gradient(135deg,rgba(124,58,237,0.25),rgba(0,212,255,0.15)); color: var(--cs); border-color: rgba(124,58,237,0.3); }
+    .founder-card:nth-child(2) .founder-avatar { background: linear-gradient(135deg,rgba(0,212,255,0.25),rgba(124,58,237,0.15)); color: var(--ai); border-color: rgba(0,212,255,0.3); }
+    .founder-card:nth-child(3) .founder-avatar { background: linear-gradient(135deg,rgba(245,158,11,0.2),rgba(124,58,237,0.15)); color: var(--es); border-color: rgba(245,158,11,0.3); }
+    .founder-card:nth-child(4) .founder-avatar { background: linear-gradient(135deg,rgba(124,58,237,0.25),rgba(245,158,11,0.15)); color: var(--cs); border-color: rgba(124,58,237,0.3); }
+    .founder-card:nth-child(5) .founder-avatar { background: linear-gradient(135deg,rgba(0,212,255,0.2),rgba(245,158,11,0.15)); color: var(--ai); border-color: rgba(0,212,255,0.3); }
+
+    .founder-name {
+      font-size: 1rem; font-weight: 700; margin-bottom: 0.3rem;
+    }
+    .founder-branch {
+      font-size: 0.75rem; font-weight: 600; letter-spacing: 0.04em;
+      color: var(--muted);
+    }
+    .founder-role-badge {
+      display: inline-block; margin-top: 0.6rem;
+      font-size: 0.62rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 0.18rem 0.55rem; border-radius: 100px;
+      background: rgba(124,58,237,0.1); color: #a78bfa;
+      border: 1px solid rgba(124,58,237,0.2);
+    }
+
+    /* ABOUT THE CLUB */
+    .about-band {
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .about-inner {
+      max-width: var(--max-w); margin: 0 auto; padding: 4rem 2rem;
+    }
+    .about-text { color: var(--muted); font-size: 0.95rem; line-height: 1.85; max-width: 680px; }
+    .about-text p { margin-bottom: 1rem; }
+    .about-text strong { color: var(--text); font-weight: 600; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="logo.png" alt="ACE Logo">
+    <span class="nav-logo-text">ACE <span class="nav-logo-sub">Club</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="wings.html">Wings</a></li>
+    <li><a href="objectives.html">Objectives</a></li>
+    <li><a href="activities.html">Activities</a></li>
+    <li><a href="competitions.html">Competitions</a></li>
+    <li><a href="team.html" class="active">Team</a></li>
+  </ul>
+ <a href="https://www.gcekjr.ac.in" target="_blank" rel="noopener noreferrer">
+    <span class="nav-badge">GCE Keonjhar</span>
+</a>
+</nav>
+
+<div class="page">
+  <section class="section">
+    <p class="section-label">The People Behind ACE</p>
+    <h1 class="section-title">Our Team</h1>
+    <p class="section-desc">Five CSE students who had a shared vision — build something meaningful for their department, from scratch. Guided by their Head of Department.</p>
+
+    <!-- MENTOR -->
+    <div class="mentor-card">
+      <div class="mentor-avatar">MB</div>
+      <div>
+        <p class="mentor-role">Faculty Mentor & Approving Authority</p>
+        <p class="mentor-name">Dr. Mukesh Bathre</p>
+        <p class="mentor-detail">Head of Department · Computer Science & Engineering<br>Government College of Engineering, Keonjhar · Odisha</p>
+      </div>
+    </div>
+
+    <!-- FOUNDERS -->
+    <p class="founders-label">Founding Members · 2024 Batch</p>
+    <div class="founders-grid">
+
+      <div class="founder-card">
+        <div class="founder-avatar">AK</div>
+        <p class="founder-name">Abhay Kumar</p>
+        <p class="founder-branch">B.Tech — CSE</p>
+        <span class="founder-role-badge">Co-Founder</span>
+      </div>
+
+      <div class="founder-card">
+        <div class="founder-avatar">MB</div>
+        <p class="founder-name">Mahes Behera</p>
+        <p class="founder-branch">B.Tech — CSE</p>
+        <span class="founder-role-badge">Co-Founder</span>
+      </div>
+
+      <div class="founder-card">
+        <div class="founder-avatar">GS</div>
+        <p class="founder-name">Gajendra Suryadev</p>
+        <p class="founder-branch">B.Tech — CSE</p>
+        <span class="founder-role-badge">Co-Founder</span>
+      </div>
+
+      <div class="founder-card">
+        <div class="founder-avatar">SB</div>
+        <p class="founder-name">Subham Behera</p>
+        <p class="founder-branch">B.Tech — CSE</p>
+        <span class="founder-role-badge">Co-Founder</span>
+      </div>
+
+      <div class="founder-card">
+        <div class="founder-avatar">IP</div>
+        <p class="founder-name">Ishan Pradhan</p>
+        <p class="founder-branch">B.Tech — CSE</p>
+        <span class="founder-role-badge">Co-Founder</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ABOUT THE CLUB ORIGIN -->
+  <div class="about-band">
+    <div class="about-inner">
+      <p class="section-label">Our Story</p>
+      <h2 class="section-title">How ACE Began</h2>
+      <div class="about-text">
+        <p>
+          ACE Club began as a <strong>focused Cybersecurity club</strong> — a proposal from five second-year CSE students at Government College of Engineering, Keonjhar who wanted hands-on technical experience beyond the classroom.
+        </p>
+        <p>
+          After evaluation and guidance from the Head of Department, the scope was expanded to include <strong>Artificial Intelligence</strong> and <strong>Embedded Systems</strong> alongside Cybersecurity — creating a truly interdisciplinary technical club that reflects the direction modern computing is heading.
+        </p>
+        <p>
+          The name <strong>ACE</strong> stands for <strong>AI · Cybersecurity · Embedded Systems</strong>. Cybersecurity remains our founding and flagship wing. The club operates under the CSE Department with full faculty support and HOD approval.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer-band">
+    <div class="footer-logo">
+      <img src="logo.png" alt="ACE">
+      <span class="footer-logo-text">ACE Club</span>
+    </div>
+    <p class="footer-sub">AI · Cybersecurity · Embedded Systems Wing &nbsp;|&nbsp; GCE Keonjhar, CSE Dept.</p>
+  </footer>
+</div>
+
+</body>
+</html>

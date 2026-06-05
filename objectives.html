@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ACE Club — Objectives</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .obj-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+    .obj-card {
+      border: 1px solid var(--border); border-radius: 14px;
+      padding: 1.75rem; background: var(--bg2);
+      transition: border-color 0.2s, transform 0.2s;
+      position: relative; overflow: hidden;
+    }
+    .obj-card:hover { border-color: rgba(255,255,255,0.15); transform: translateY(-2px); }
+    .obj-num {
+      font-family: 'Syne', sans-serif;
+      font-size: 3rem; font-weight: 800;
+      color: rgba(255,255,255,0.04);
+      position: absolute; top: 0.75rem; right: 1rem;
+      line-height: 1; pointer-events: none;
+    }
+    .obj-icon { font-size: 1.5rem; margin-bottom: 1rem; display: block; }
+    .obj-title { font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .obj-text { font-size: 0.85rem; color: var(--muted); line-height: 1.7; }
+
+    .vision-band {
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .vision-inner {
+      max-width: var(--max-w); margin: 0 auto;
+      padding: 4rem 2rem;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;
+    }
+    @media (max-width: 640px) { .vision-inner { grid-template-columns: 1fr; } }
+    .vision-title {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 800;
+      letter-spacing: -0.03em; margin-bottom: 1rem;
+    }
+    .vision-text { color: var(--muted); font-size: 0.93rem; line-height: 1.8; }
+    .vision-stats { display: flex; flex-direction: column; gap: 1rem; }
+    .stat-row {
+      display: flex; align-items: center; gap: 1rem;
+      border: 1px solid var(--border); border-radius: 10px;
+      padding: 1rem 1.25rem; background: var(--bg);
+    }
+    .stat-icon { font-size: 1.3rem; }
+    .stat-label { font-size: 0.85rem; color: var(--muted); }
+    .stat-val { font-size: 1rem; font-weight: 700; color: var(--text); }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="logo.png" alt="ACE Logo">
+    <span class="nav-logo-text">ACE <span class="nav-logo-sub">Club</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="wings.html">Wings</a></li>
+    <li><a href="objectives.html" class="active">Objectives</a></li>
+    <li><a href="activities.html">Activities</a></li>
+    <li><a href="competitions.html">Competitions</a></li>
+    <li><a href="team.html">Team</a></li>
+  </ul>
+ <a href="https://www.gcekjr.ac.in" target="_blank" rel="noopener noreferrer">
+    <span class="nav-badge">GCE Keonjhar</span>
+</a>
+</nav>
+
+<div class="page">
+  <section class="section">
+    <p class="section-label">Why We Exist</p>
+    <h1 class="section-title">Core Objectives</h1>
+    <p class="section-desc">ACE Club was founded to close the gap between classroom theory and real-world technical competence — across AI, Cybersecurity, and Embedded Systems.</p>
+
+    <div class="obj-grid">
+      <div class="obj-card">
+        <span class="obj-num">01</span>
+        <span class="obj-icon">⚡</span>
+        <p class="obj-title">Skill Development</p>
+        <p class="obj-text">Provide practical, hands-on knowledge of AI, cybersecurity, and embedded systems. Improve problem-solving ability, technical depth, and proficiency with industry-standard tools.</p>
+      </div>
+      <div class="obj-card">
+        <span class="obj-num">02</span>
+        <span class="obj-icon">🔐</span>
+        <p class="obj-title">Cybersecurity Awareness</p>
+        <p class="obj-text">Educate students and the campus community on cyber threats, online safety, responsible digital behavior, and the ethics of AI-powered and connected systems.</p>
+      </div>
+      <div class="obj-card">
+        <span class="obj-num">03</span>
+        <span class="obj-icon">🧪</span>
+        <p class="obj-title">Practical Learning</p>
+        <p class="obj-text">Organize workshops, seminars, CTF competitions, AI hackathons, and hardware labs. Hands-on experience over theoretical learning — always.</p>
+      </div>
+      <div class="obj-card">
+        <span class="obj-num">04</span>
+        <span class="obj-icon">🏆</span>
+        <p class="obj-title">College Representation</p>
+        <p class="obj-text">Compete in national and international events, build connections with technical communities, and put Government College of Engineering, Keonjhar on the map.</p>
+      </div>
+      <div class="obj-card">
+        <span class="obj-num">05</span>
+        <span class="obj-icon">🔗</span>
+        <p class="obj-title">Interdisciplinary Integration</p>
+        <p class="obj-text">Explore the intersection of AI, cybersecurity, and embedded hardware — areas like intelligent threat detection, secure IoT design, and real-world system building.</p>
+      </div>
+      <div class="obj-card">
+        <span class="obj-num">06</span>
+        <span class="obj-icon">🌱</span>
+        <p class="obj-title">Community Building</p>
+        <p class="obj-text">Create a collaborative, inclusive technical community within the CSE department where every student — beginner to advanced — has a place to learn and contribute.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISION BAND -->
+  <div class="vision-band">
+    <div class="vision-inner">
+      <div>
+        <p style="font-size:0.68rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--muted); font-weight:600; margin-bottom:0.5rem;">Our Vision</p>
+        <h2 class="vision-title">Build. Hack. Innovate.</h2>
+        <p class="vision-text">
+          ACE Club was born from the idea that the most impactful technology today sits at the crossroads of intelligence, security, and hardware. We want our members to be ready for a world where these disciplines are inseparable — and we're building that foundation one session at a time.
+        </p>
+      </div>
+      <div class="vision-stats">
+        <div class="stat-row">
+          <span class="stat-icon">🛡️</span>
+          <div>
+            <p class="stat-label">Primary Focus</p>
+            <p class="stat-val">Cybersecurity — Flagship Wing</p>
+          </div>
+        </div>
+        <div class="stat-row">
+          <span class="stat-icon">🎓</span>
+          <div>
+            <p class="stat-label">Institution</p>
+            <p class="stat-val">GCE Keonjhar, CSE Dept.</p>
+          </div>
+        </div>
+        <div class="stat-row">
+          <span class="stat-icon">👥</span>
+          <div>
+            <p class="stat-label">Founded by</p>
+            <p class="stat-val">5 CSE Students, 2024 Batch</p>
+          </div>
+        </div>
+        <div class="stat-row">
+          <span class="stat-icon">🔬</span>
+          <div>
+            <p class="stat-label">Domains</p>
+            <p class="stat-val">AI · Cybersecurity · Embedded Systems</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer-band">
+    <div class="footer-logo">
+      <img src="logo.png" alt="ACE">
+      <span class="footer-logo-text">ACE Club</span>
+    </div>
+    <p class="footer-sub">AI · Cybersecurity · Embedded Systems Wing &nbsp;|&nbsp; GCE Keonjhar, CSE Dept.</p>
+  </footer>
+</div>
+
+</body>
+</html>

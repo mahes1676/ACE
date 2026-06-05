@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ACE Club — Competitions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .comp-section-wrap {
+      display: flex; flex-direction: column; gap: 3rem;
+    }
+    .comp-category { }
+    .comp-cat-label {
+      font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--muted); font-weight: 700;
+      margin-bottom: 1rem; padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .comp-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 0.85rem;
+    }
+    .comp-card {
+      border: 1px solid var(--border); border-radius: 11px;
+      padding: 1.25rem; background: var(--bg2);
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .comp-card:hover { border-color: rgba(255,255,255,0.15); transform: translateY(-2px); }
+    .comp-name {
+      font-size: 0.92rem; font-weight: 600;
+      margin-bottom: 0.35rem;
+    }
+    .comp-detail { font-size: 0.78rem; color: var(--muted); line-height: 1.5; }
+    .comp-tag {
+      display: inline-block; margin-top: 0.65rem;
+      font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 0.18rem 0.55rem; border-radius: 100px;
+    }
+    .tag-cs { background: rgba(124,58,237,0.10); color: #a78bfa; border: 1px solid rgba(124,58,237,0.18); }
+    .tag-ai { background: rgba(0,212,255,0.08); color: var(--ai); border: 1px solid rgba(0,212,255,0.15); }
+    .tag-es { background: rgba(245,158,11,0.08); color: var(--es); border: 1px solid rgba(245,158,11,0.15); }
+    .tag-all { background: rgba(255,255,255,0.05); color: var(--muted); border: 1px solid var(--border); }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="logo.png" alt="ACE Logo">
+    <span class="nav-logo-text">ACE <span class="nav-logo-sub">Club</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="wings.html">Wings</a></li>
+    <li><a href="objectives.html">Objectives</a></li>
+    <li><a href="activities.html">Activities</a></li>
+    <li><a href="competitions.html" class="active">Competitions</a></li>
+    <li><a href="team.html">Team</a></li>
+  </ul>
+ <a href="https://www.gcekjr.ac.in" target="_blank" rel="noopener noreferrer">
+    <span class="nav-badge">GCE Keonjhar</span>
+</a>
+</nav>
+
+<div class="page">
+  <section class="section">
+    <p class="section-label">Where We Compete</p>
+    <h1 class="section-title">Competitions & Platforms</h1>
+    <p class="section-desc">From national hackathons to international CTFs — ACE members represent GCE Keonjhar at the highest levels across all three wings.</p>
+
+    <div class="comp-section-wrap">
+
+      <!-- National Hackathons -->
+      <div class="comp-category">
+        <p class="comp-cat-label">🇮🇳 National Hackathons</p>
+        <div class="comp-cards">
+          <div class="comp-card">
+            <p class="comp-name">Smart India Hackathon (SIH)</p>
+            <p class="comp-detail">Government of India's flagship national hackathon. 36-hour problem-solving across domains.</p>
+            <span class="comp-tag tag-all">All Wings</span>
+          </div>
+          <div class="comp-card">
+            <p class="comp-name">India Cybersecurity Challenge</p>
+            <p class="comp-detail">National-level cybersecurity competition with real-world attack-defense scenarios.</p>
+            <span class="comp-tag tag-cs">Cybersecurity</span>
+          </div>
+          <div class="comp-card">
+            <p class="comp-name">Toycathon</p>
+            <p class="comp-detail">AICTE hackathon for innovative product and toy design with embedded and AI integration.</p>
+            <span class="comp-tag tag-es">Embedded</span>
+          </div>
+          <div class="comp-card">
+            <p class="comp-name">NASSCOM AI Student Challenge</p>
+            <p class="comp-detail">Industry-backed AI competition for college students. Real datasets, real solutions.</p>
+            <span class="comp-tag tag-ai">AI</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Indian CTFs -->
+      <div class="comp-category">
+        <p class="comp-cat-label">🛡️ Indian CTF Competitions</p>
+        <div class="comp-cards">
+          <div class="comp-card">
+            <p class="comp-name">Nullcon HackIM CTF</p>
+            <p class="comp-detail">One of India's oldest and most respected CTF competitions, held alongside Nullcon security conference.</p>
+            <span class="comp-tag tag-cs">Cybersecurity</span>
+          </div>
+          <div class="comp-card">
+            <p class="comp-name">InCTF — Amrita University</p>
+            <p class="comp-detail">Premier Indian CTF organized by team bi0s at Amrita. Recognized globally in the CTF community.</p>
+            <span class="comp-tag tag-cs">Cybersecurity</span>
+          </div>
+          <div class="comp-card">
+            <p class="comp-name">BITSCTF — BITS Pilani</p>
+            <p class="comp-detail">College-organized CTF with challenges spanning web, crypto, forensics, and pwn.</p>
+            <span class="comp-tag tag-cs">Cybersecurity</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Online Practice Platforms -->
+      <div class="comp-category">
+        <p class="comp-cat-label">💻 Online Practice Platforms</p>
+        <div class="comp-cards">
+          <div class="comp-card">
+            <p class="comp-name">Hack The Box</p>
+            <p class="comp-detail">Gamified cybersecurity platform with machines, challenges, and labs for all skill levels.</p>
+            <span class="comp-tag tag-cs">Cybersecurity</span>
+          </div>
+          <div class="comp-card">
+            <p class="comp-name">TryHackMe</p>
+            <p class="comp-detail">Guided learning paths for beginners and advanced players. Great for club onboarding sessions.</p>
+            <span class="comp-tag tag-cs">Cybersecurity</span>
+          </div>
+          <div class="comp-card">
+            <p class="comp-name">picoCTF — CMU</p>
+            <p class="comp-detail">Carnegie Mellon's beginner-friendly CTF. Perfect for first-time participants to build confidence.</p>
+            <span class="comp-tag tag-cs">Cybersecurity</span>
+          </div>
+          <div class="comp-card">
+            <p class="comp-name">Root Me</p>
+            <p class="comp-detail">French cybersecurity platform with over 400 challenges in web, network, forensics, and more.</p>
+            <span class="comp-tag tag-cs">Cybersecurity</span>
+          </div>
+          <div class="comp-card">
+            <p class="comp-name">Kaggle</p>
+            <p class="comp-detail">World's largest data science and ML competition platform. Real datasets, real cash prizes.</p>
+            <span class="comp-tag tag-ai">AI</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- International CTFs -->
+      <div class="comp-category">
+        <p class="comp-cat-label">🌍 International CTF Competitions</p>
+        <div class="comp-cards">
+          <div class="comp-card">
+            <p class="comp-name">Google CTF</p>
+            <p class="comp-detail">Google's annual CTF with elite-level challenges. A major milestone for any team.</p>
+            <span class="comp-tag tag-cs">Cybersecurity</span>
+          </div>
+          <div class="comp-card">
+            <p class="comp-name">DEF CON CTF</p>
+            <p class="comp-detail">The world's most prestigious hacking competition held at DEF CON, Las Vegas. The Olympics of CTF.</p>
+            <span class="comp-tag tag-cs">Cybersecurity</span>
+          </div>
+          <div class="comp-card">
+            <p class="comp-name">Cyber Apocalypse CTF — HackTheBox</p>
+            <p class="comp-detail">Annual large-scale global CTF by HTB with thousands of teams. Narrative-driven, high quality.</p>
+            <span class="comp-tag tag-cs">Cybersecurity</span>
+          </div>
+          <div class="comp-card">
+            <p class="comp-name">HITCON CTF — Taiwan</p>
+            <p class="comp-detail">High-quality Taiwanese CTF with hard pwn and web challenges. Respected globally.</p>
+            <span class="comp-tag tag-cs">Cybersecurity</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Community Events -->
+      <div class="comp-category">
+        <p class="comp-cat-label">🤝 Communities & Events</p>
+        <div class="comp-cards">
+          <div class="comp-card">
+            <p class="comp-name">OWASP Security Events</p>
+            <p class="comp-detail">Open Web Application Security Project — workshops, chapters, and security challenges worldwide.</p>
+            <span class="comp-tag tag-cs">Cybersecurity</span>
+          </div>
+          <div class="comp-card">
+            <p class="comp-name">NCSC India Programs</p>
+            <p class="comp-detail">National Cyber Security Centre programs for student cybersecurity education and competitions.</p>
+            <span class="comp-tag tag-cs">Cybersecurity</span>
+          </div>
+          <div class="comp-card">
+            <p class="comp-name">IEEE & ACM Events</p>
+            <p class="comp-detail">Technical events, hackathons, and project competitions organized by IEEE and ACM student chapters.</p>
+            <span class="comp-tag tag-all">All Wings</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer-band">
+    <div class="footer-logo">
+      <img src="logo.png" alt="ACE">
+      <span class="footer-logo-text">ACE Club</span>
+    </div>
+    <p class="footer-sub">AI · Cybersecurity · Embedded Systems Wing &nbsp;|&nbsp; GCE Keonjhar, CSE Dept.</p>
+  </footer>
+</div>
+
+</body>
+</html>
