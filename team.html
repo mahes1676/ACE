@@ -92,6 +92,96 @@
     .about-text { color: var(--muted); font-size: 0.95rem; line-height: 1.85; max-width: 680px; }
     .about-text p { margin-bottom: 1rem; }
     .about-text strong { color: var(--text); font-weight: 600; }
+
+ /* MODAL STYLES (UPDATED) */
+.founder-card {
+  cursor: pointer;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(7, 11, 22, 0.85);
+  backdrop-filter: blur(8px);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 2000;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.modal-overlay.active {
+  opacity: 1; pointer-events: auto;
+}
+
+.modal-content {
+  background: #0d1527; 
+  border: 1px solid rgba(124, 58, 237, 0.3);
+  border-radius: 16px;
+  width: 90%; max-width: 400px;
+  padding: 2.2rem 2rem;
+  position: relative;
+  text-align: center;
+  color: #fff;
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.modal-overlay.active .modal-content {
+  transform: scale(1);
+}
+
+.close-btn {
+  position: absolute;
+  top: 1rem; right: 1.2rem;
+  background: none; border: none;
+  color: #a78bfa; font-size: 2rem;
+  cursor: pointer; transition: color 0.2s;
+}
+.close-btn:hover { color: #00d4ff; }
+
+#modalName {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.6rem; font-weight: 800;
+  margin-top: 0.5rem; margin-bottom: 0.3rem;
+}
+
+.modal-badge {
+  display: inline-block;
+  font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 0.2rem 0.6rem; border-radius: 100px;
+  background: rgba(0, 212, 255, 0.1); color: #00d4ff;
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  margin-bottom: 0.5rem;
+}
+
+.modal-text { font-size: 0.88rem; color: #94a3b8; margin-bottom: 0.5rem; }
+.modal-divider { border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin: 1.25rem 0; }
+
+.modal-contact-info {
+  text-align: left;
+  font-size: 0.9rem; color: #cbd5e1;
+  line-height: 1.6; margin-bottom: 1.5rem;
+}
+.modal-contact-info strong { color: #a78bfa; }
+
+.modal-socials {
+  display: flex; gap: 1rem; justify-content: center;
+}
+
+.social-link {
+  flex: 1; padding: 0.6rem;
+  border-radius: 8px; font-size: 0.85rem; font-weight: 600;
+  text-decoration: none; text-align: center;
+  transition: background 0.2s, color 0.2s;
+}
+.linkedin { background: #0077b5; color: white; }
+.linkedin:hover { background: #005a87; }
+
+/* GitHub Button Dark Accent Styling */
+.github { background: #24292e; color: white; border: 1px solid rgba(255,255,255,0.15); }
+.github:hover { background: #1a1e22; }
   </style>
 </head>
 <body>
@@ -132,44 +222,83 @@
 
     <!-- FOUNDERS -->
     <p class="founders-label">Founding Members · 2024 Batch</p>
-    <div class="founders-grid">
+<div class="founders-grid">
 
-      <div class="founder-card">
-        <div class="founder-avatar">AK</div>
-        <p class="founder-name">Abhay Kumar</p>
-        <p class="founder-branch">B.Tech — CSE</p>
-        <span class="founder-role-badge">Student Lead</span>
-      </div>
+  <div class="founder-card" 
+       data-name="Abhay Kumar" 
+       data-branch="B.Tech — CSE" 
+       data-role="Student Lead"
+       data-phone="+"
+       data-email="a"
+       data-linkedin=""
+       data-github="">
+    <div class="founder-avatar">AK</div>
+    <p class="founder-name">Abhay Kumar</p>
+    <p class="founder-branch">B.Tech — CSE</p>
+    <span class="founder-role-badge">Student Lead</span>
+  </div>
 
-      <div class="founder-card">
-        <div class="founder-avatar">MB</div>
-        <p class="founder-name">Mahes Behera</p>
-        <p class="founder-branch">B.Tech — CSE</p>
-        <span class="founder-role-badge">Tech Lead</span>
-      </div>
+  <div class="founder-card" 
+       data-name="Mahes Behera" 
+       data-branch="B.Tech — CSE" 
+       data-role="Tech Lead"
+       data-phone="6370378084"
+       data-email="mahes4021@gmail.com"
+       data-linkedin=""
+       data-github="">
+    <div class="founder-avatar">MB</div>
+    <p class="founder-name">Mahes Behera</p>
+    <p class="founder-branch">B.Tech — CSE</p>
+    <span class="founder-role-badge">Member</span>
+  </div>
 
-      <div class="founder-card">
-        <div class="founder-avatar">GS</div>
-        <p class="founder-name">Gajendra Suryadev</p>
-        <p class="founder-branch">B.Tech — CSE</p>
-        <span class="founder-role-badge">Outreach Lead</span>
-      </div>
+  <div class="founder-card" 
+       data-name="Gajendra Suryadev" 
+       data-branch="B.Tech — CSE" 
+       data-role="Outreach Lead"
+       data-phone=""
+       data-email=""
+       data-linkedin="h"
+       data-github="e">
+    <div class="founder-avatar">GS</div>
+    <p class="founder-name">Gajendra Suryadev</p>
+    <p class="founder-branch">B.Tech — CSE</p>
+    <span class="founder-role-badge">Member</span>
+  </div>
 
-      <div class="founder-card">
-        <div class="founder-avatar">SB</div>
-        <p class="founder-name">Subham Behera</p>
-        <p class="founder-branch">B.Tech — CSE</p>
-        <span class="founder-role-badge"></span>
-      </div>
+  <div class="founder-card" 
+       data-name="Subham Behera" 
+       data-branch="B.Tech — CSE" 
+       data-role="Founding Member"
+       data-phone="+"
+       data-email=""
+       data-linkedin="https:/e"
+       data-github="">
+    <div class="founder-avatar">SB</div>
+    <p class="founder-name">Subham Behera</p>
+    <p class="founder-branch">B.Tech — CSE</p>
+    <span class="founder-role-badge">Member</span>
+  </div>
 
-      <div class="founder-card">
-        <div class="founder-avatar">IP</div>
-        <p class="founder-name">Ishan Pradhan</p>
-        <p class="founder-branch">B.Tech — CSE</p>
-        <span class="founder-role-badge"></span>
-      </div>
+  <div class="founder-card" 
+       data-name="Ishan Pradhan" 
+       data-branch="B.Tech — CSE" 
+       data-role="Founding Member"
+       data-phone=""
+       data-email=""
+       data-linkedin=""
+       data-github="">
+    <div class="founder-avatar">IP</div>
+    <p class="founder-name">Ishan Pradhan</p>
+    <p class="founder-branch">B.Tech — CSE</p>
+    <span class="founder-role-badge">Member</span>
+  </div>
 
-    </div>
+</div>
+
+ 
+
+</div>
   </section>
 
   <!-- ABOUT THE CLUB ORIGIN -->
@@ -179,7 +308,7 @@
       <h2 class="section-title">How ACE Began</h2>
       <div class="about-text">
         <p>
-          ACE Club began as a <strong>focused Cybersecurity club</strong> — a proposal from five second-year CSE students at Government College of Engineering, Keonjhar who wanted hands-on technical experience beyond the classroom.
+          ACE Club began as a <strong>focused Cybersecurity club</strong> — a proposal from five CSE students at Government College of Engineering, Keonjhar who wanted hands-on technical experience beyond the classroom.
         </p>
         <p>
           After evaluation and guidance from the Head of Department, the scope was expanded to include <strong>Artificial Intelligence</strong> and <strong>Embedded Systems</strong> alongside Cybersecurity — creating a truly interdisciplinary technical club that reflects the direction modern computing is heading.
@@ -200,5 +329,67 @@
   </footer>
 </div>
 
+<div class="modal-overlay" id="teamModal">
+  <div class="modal-content">
+    <button class="close-btn" id="closeModal">&times;</button>
+    
+    <div class="modal-body">
+      <h2 id="modalName"></h2>
+      <p id="modalRole" class="modal-badge"></p>
+      <p id="modalBranch" class="modal-text"></p>
+      
+      <hr class="modal-divider">
+      
+      <div class="modal-contact-info">
+        <p><strong>Email:</strong> <span id="modalEmail"></span></p>
+        <p><strong>Phone:</strong> <span id="modalPhone"></span></p>
+      </div>
+      
+      <div class="modal-socials">
+        <a id="modalLinkedin" href="#" target="_blank" class="social-link linkedin">LinkedIn</a>
+        <a id="modalGithub" href="#" target="_blank" class="social-link github">GitHub</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 </body>
+
+<script>
+  const cards = document.querySelectorAll('.founder-card');
+  const modal = document.getElementById('teamModal');
+  const closeBtn = document.getElementById('closeModal');
+
+  const mName = document.getElementById('modalName');
+  const mRole = document.getElementById('modalRole');
+  const mBranch = document.getElementById('modalBranch');
+  const mEmail = document.getElementById('modalEmail');
+  const mPhone = document.getElementById('modalPhone');
+  const mLinkedin = document.getElementById('modalLinkedin');
+  const mGithub = document.getElementById('modalGithub'); // Targeted update
+
+  cards.forEach(card => {
+    card.addEventListener('click', () => {
+      mName.innerText = card.dataset.name;
+      mRole.innerText = card.dataset.role;
+      mBranch.innerText = card.dataset.branch;
+      mEmail.innerText = card.dataset.email;
+      mPhone.innerText = card.dataset.phone;
+      
+      mLinkedin.href = card.dataset.linkedin;
+      mGithub.href = card.dataset.github; // Pulls from data-github attribute
+
+      modal.classList.add('active');
+    });
+  });
+
+  const closeModal = () => modal.classList.remove('active');
+  closeBtn.addEventListener('click', closeModal);
+  
+  window.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+</script>
+
 </html>

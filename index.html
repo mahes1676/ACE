@@ -101,15 +101,28 @@
     .quick-card.es .qc-name { color: var(--es); }
     .qc-desc { font-size: 0.83rem; color: var(--muted); line-height: 1.65; }
     .qc-arrow { margin-top: 1rem; font-size: 0.78rem; color: var(--muted); }
+
+
+    .nav-logo {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo img {
+  height: 40px; /* Perfect height for a clean nav bar */
+  width: auto;
+  display: block;
+  mix-blend-mode: screen; /* Instantly removes the black square background */
+}
+
   </style>
 </head>
 <body>
 
 <nav>
   <a href="index.html" class="nav-logo">
-    <img src="logo.png" alt="ACE Logo">
-    <span class="nav-logo-text">ACE <span class="nav-logo-sub">Club</span></span>
-  </a>
+  <img src="logo.png" alt="ACE Logo">
+</a>
   <ul class="nav-links">
     <li><a href="index.html" class="active">Home</a></li>
     <li><a href="wings.html">Wings</a></li>
